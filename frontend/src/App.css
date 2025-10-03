@@ -1,38 +1,142 @@
-.App {
+/* Add these to your existing App.css */
+
+.dashboard-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+}
+
+.dashboard-header {
   text-align: center;
+  margin-bottom: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dashboard-header h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dashboard-header p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.auth-container {
+  background: white;
+  border-radius: 15px;
+  padding: 0;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.auth-tabs {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-bottom: 1px solid #eee;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 20px;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.auth-tab.active {
+  background: #3498db;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.auth-tab:first-child {
+  border-radius: 15px 0 0 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.auth-tab:last-child {
+  border-radius: 0 15px 0 0;
+}
+
+.auth-form {
+  padding: 30px;
+}
+
+.auth-submit-btn {
+  width: 100%;
+  padding: 15px;
+  background: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth-submit-btn:hover {
+  background: #27ae60;
+}
+
+.dashboard-info {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.dashboard-info h3 {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card h4 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+/* Update sidebar header to show user info */
+.user-info {
+  text-align: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.user-info h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.user-info p {
+  font-size: 0.8rem;
+  opacity: 0.8;
 }
